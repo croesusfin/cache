@@ -1,0 +1,34 @@
+# Dependabot: fork kept for its consumers -- security updates only.
+# open-pull-requests-limit: 0 disables version updates without disabling
+# security updates. Future of the fork: DEVEX-2886.
+# DEVEX-2868
+version: 2
+updates:
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 0
+  commit-message:
+    prefix: build
+    prefix-development: build
+    include: scope
+  groups:
+    github_actions_security:
+      applies-to: security-updates
+      patterns:
+      - '*'
+- package-ecosystem: npm
+  directory: /
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 0
+  commit-message:
+    prefix: build
+    prefix-development: build
+    include: scope
+  groups:
+    npm_security:
+      applies-to: security-updates
+      patterns:
+      - '*'
