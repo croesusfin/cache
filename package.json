@@ -47,5 +47,9 @@
     "prettier": "^1.19.1",
     "ts-jest": "^26.5.4",
     "typescript": "^3.9.9"
+  },
+  "overrides": {
+    "form-data@<2.5.4": "^2.5.4",
+    "json-schema": "^0.4.0"
   }
 }
